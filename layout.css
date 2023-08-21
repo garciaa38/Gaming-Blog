@@ -137,6 +137,12 @@ textarea {
     height: 150px;
 }
 
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
 .game-card {
     height: 350px;
     width: 252.15px;
@@ -160,14 +166,26 @@ textarea {
 
 .boxart img {
     height: 100%;
+    width: 252.15px;
 }
 
 .game-info {
     position: absolute;
     grid-row: 2 / 5;
     grid-column: 1 / 2;
+    width: 252.15px;
+    height: 100%;
     transform: translateY(180px);
     background-color: rgba(0, 0, 0, 0.5);
+    font-family: "proximanova-regular", -apple-system, ".SFNSText-Regular",
+        BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu",
+        "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande",
+        sans-serif;
+}
+
+.game-info h3,
+h4 {
+    margin-left: 5px;
 }
 
 @keyframes slideUp {
@@ -176,14 +194,14 @@ textarea {
     }
 
     50% {
-        transform: translateY(-2px);
+        transform: translateY(-1px);
     }
 
     75% {
-        transform: translateY(-3px);
+        transform: translateY(-2px);
     }
 
     100% {
-        transform: translateY(-5px);
+        transform: translateY(0px);
     }
 }
