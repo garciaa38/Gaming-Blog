@@ -3,6 +3,7 @@
 
 <head>
     <title>Andy's Gaming Blog!</title>
+    <link rel="stylesheet" type="text/css" href="layout.css">
 </head>
 
 <body>
@@ -10,35 +11,60 @@
         <h1>Andy's Gaming Blog!</h1>
     </div>
     <div>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Home</a></li>
+        <ul class="navbar">
+            <li><a href="page1.html">Home</a></li>
+            <li><a href="page2.html">Add Game</a></li>
+            <li><a href="page3.html">In progress</a></li>
+            <li><a href="page4.html">Game List</a></li>
         </ul>
     </div>
     <div>
         <form>
             <fieldset>
-                <legend>Add Game to Database</legend>
-                <div>
-                    <label for="">Input 1</label>
-                    <input type="text" id="" name="">
-                </div>
-                <div>
-                    <label for="">Input 2</label>
-                    <input type="text" id="" name="">
-                </div>
-                <div>
-                    <label for="">Input 3</label>
-                    <input type="checkbox" id="" name="">
-                </div>
-                <div>
-                    <label for="">Input 1</label>
-                    <textarea id="" name=""></textarea>
-                </div>
-                <div>
-                    <button type="submit">Add Game</button>
+                <legend>Review a Game!</legend>
+                <div class="input_field">
+                    <div>
+                        <div>
+                            <label for="game-name">Game Name:</label>
+                        </div>
+                        <div>
+                            <input type="text" id="game-name" name="name_of_game">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="system-used">System Used</label>
+                        </div>
+                        <div>
+                            <input type="text" id="system-used" name="system_used">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="review">Review</label>
+                        </div>
+                        <div>
+                            <textarea id="review" name="review"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="rating">Rating</label>
+                        </div>
+                        <div>
+                            <select id="rating">
+                                <option value="5-stars">5 Stars</option>
+                                <option value="4-stars">4 Stars</option>
+                                <option value="3-stars">3 Stars</option>
+                                <option value="2-stars">2 Stars</option>
+                                <option value="1-stars">1 Stars</option>
+                                <option value="0-stars">0 Stars</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit">Add Game</button>
+                    </div>
                 </div>
             </fieldset>
         </form>

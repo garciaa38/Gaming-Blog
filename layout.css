@@ -1,5 +1,189 @@
+body {
+    background: linear-gradient(-45deg, #12263A, #0B295A, #072279, #1153A4);
+    background-size: 400% 400%;
+    color: aliceblue;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .navbar {
+    position: relative;
+    display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(45deg, #BA1200, #BA2D0B, #BA430B, #BA570B);
+    background-size: 100% 100%;
+    animation: gradient 15s ease infinite;
+    text-align: left;
+    font-family: "proximanova-regular", -apple-system, ".SFNSText-Regular",
+        BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu",
+        "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande",
+        sans-serif;
+    font-size: large;
+    padding: 15px 15px 15px 0px;
+    margin-right: 50%;
+}
+
+.navbar:after {
+    content: " ";
+    position: absolute;
+    background: linear-gradient(45deg, #BA1200, #BA2D0B, #BA430B, #BA570B);
+    background-size: 100% 100%;
+    animation: gradient 15s ease infinite;
+    height: 54px;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: -15px;
+    margin-bottom: 50px;
+    transform: skew(45deg);
+    transform-origin: top right;
+    z-index: -1;
+}
+
+.navbar li a {
+    padding: 15px 15px;
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+.navbar li a:hover {
+    background-color: #111;
+}
+
+h1 {
+    margin-left: 3%;
+    font-size: 75px;
+}
+
+h2 {
+    border-bottom-style: inset;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
+.text-block {
+    display: block;
+    margin-right: 30%;
+    margin-left: 5%;
+    border-style: inset;
+    padding: 15px;
+}
+
+fieldset {
+    display: block;
+    text-align: left;
+    margin-left: 10%;
+    background-color: silver;
+    margin-right: 70%;
+}
+
+input {
+    width: 100%;
+}
+
+legend {
+    margin-left: 95px;
+    border-style: outset;
+    background-color: #BA1200;
+    font-size: 20px;
+}
+
+label {
+    font-size: large;
+}
+
+.input_field {
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #1153A4;
+    background-color: #BA1200;
+    width: auto;
+    box-sizing: border-box;
+    padding-left: 17px;
+    padding-right: 20px;
+}
+
+input,
+label,
+textarea,
+select,
+button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+select,
+button {
+    display: inline;
+}
+
+textarea {
+    width: 300px;
+    height: 150px;
+}
+
+.game-card {
+    height: 350px;
+    width: 252.15px;
+    display: grid;
+    grid-template: 55% 15% 15% 15% / 100%;
+    border-style: outset;
+    position: relative;
+    overflow: hidden;
+    transition: 2s;
+}
+
+
+.game-card:hover .game-info {
+    animation: slideUp ease 2s forwards;
+}
+
+.boxart {
+    grid-row: 1 / span 4;
+    grid-column: 1 / 2
+}
+
+.boxart img {
+    height: 100%;
+}
+
+.game-info {
+    position: absolute;
+    grid-row: 2 / 5;
+    grid-column: 1 / 2;
+    transform: translateY(180px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(180px);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+
+    75% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
 }
